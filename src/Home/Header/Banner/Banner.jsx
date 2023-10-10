@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="container mx-auto text-center md:p-36 w-full  backdrop-brightness-90 mt-none bg-cover h-4/5 "  style={{ 
+        <div className=" text-center md:p-36 w-full  backdrop-brightness-90 mt-none bg-cover h-4/5 "  style={{ 
             backgroundImage: `url("https://i.ibb.co/51bKy2c/pexels-photo-931321.jpg ")` 
           }}>
             

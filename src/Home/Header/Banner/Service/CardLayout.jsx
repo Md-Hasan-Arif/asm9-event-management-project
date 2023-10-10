@@ -1,5 +1,7 @@
 // import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
 const CardLayout = ({ card }) => {
     console.log(card)
 
@@ -23,7 +25,10 @@ const CardLayout = ({ card }) => {
 
             </div>
             <div className=" text-center mt-6">
-                <button className="btn btn-error bg-orange-600">Dtails</button>
+                <Link to={'/details/:id'}>
+                    <button className="btn btn-error bg-orange-600">Dtails</button>
+                </Link>
+
             </div>
 
         </div>

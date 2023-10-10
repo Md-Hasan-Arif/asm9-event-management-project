@@ -13,6 +13,10 @@ import Root from './Components/Root/Root';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
+import Details from './Components/Details/Details';
+import About from './Components/About/About';
+import ContactUs from './Components/Contact/ContactUs';
+import PrivateRout from './Private route/PrivateRout';
 
 
 const router = createBrowserRouter([
@@ -34,11 +38,23 @@ const router = createBrowserRouter([
         element: <Register></Register>,
 
       },
-      // {
-      //   path:'/registerHero',
-      //   element:<Hero></Hero>,
-
-      // }
+      {
+        path:'/about',
+        element: <PrivateRout>
+             <About></About>
+          </PrivateRout>,
+      },
+      {
+        path:'/contactUs',
+        element: <PrivateRout>
+          <ContactUs></ContactUs>
+          </PrivateRout>,
+      },
+      {
+        path:'/details/:id',
+        element:<Details></Details>,
+        loader: ()=> fetch('/public/gym.json')
+      }
     ]
   },
 ]);

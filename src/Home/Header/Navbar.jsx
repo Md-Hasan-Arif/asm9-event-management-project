@@ -15,12 +15,13 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/login">About</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/contactUs">Contuct Us</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
        
     </>
     return (
-        <div className="container mx-auto">
+        <div >
             <div className="navbar bg-gray-400">
                 <div className="navbar-start">
                     <div className="dropdown">
