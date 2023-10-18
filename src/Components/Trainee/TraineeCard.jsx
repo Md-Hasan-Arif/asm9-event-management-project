@@ -13,7 +13,7 @@ const TraineeCard = () => {
    
 
     useEffect(()=>{
-        fetch('/public/Trainee.json')
+        fetch('/Trainee.json')
         .then(res => res.json())
         .then(data=>setCard(data))
     },[])

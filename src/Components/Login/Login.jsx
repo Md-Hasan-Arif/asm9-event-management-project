@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+// import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 
 const Login = () => {
@@ -15,6 +16,9 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+        // const auth = getAuth;
+        // const provider = new GoogleAuthProvider()
+        // signInWithPopup(auth, provider)
 
         setLoginErr('');
         
@@ -59,9 +63,7 @@ const Login = () => {
                         {
                             LoginErr && <p className="text-red-600 pl-3">{LoginErr}</p>
                         }
-                        {
-                            // success && <p className="text-green-600 pl-3">{success}</p>
-                        }
+                       
                         <p className="p-4">New to our site? Please <Link to="/register">
                         <button className="btn btn-link">Register</button></Link>
                         </p>

@@ -12,7 +12,7 @@ const ServiceCard = () => {
    
 
     useEffect(()=>{
-        fetch('/public/gym.json')
+        fetch('/gym.json')
         .then(res => res.json())
         .then(data=>setCard(data))
     },[])
